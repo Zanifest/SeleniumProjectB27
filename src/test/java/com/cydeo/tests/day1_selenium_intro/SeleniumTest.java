@@ -10,6 +10,7 @@ public class SeleniumTest {
 
         //1- Setting up the web driver manager
         WebDriverManager.chromedriver().setup();
+//        System.setProperty("webdriver.chrome.driver", "C:\\Users\\zanya\\OneDrive\\Desktop\\Automation");
 
         //2- Create instance of the chrome driver
         WebDriver driver = new ChromeDriver();
