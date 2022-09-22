@@ -25,7 +25,7 @@ PS: Locate “Home” link using “className” locator
         driver.manage().window().maximize();
 
         driver.navigate().to("https://practice.cydeo.com/inputs");
-        WebElement homeButton = driver.findElement(By.className("nav-link")); // more efficient than linkText because more unique int this case.
+        WebElement homeButton = driver.findElement(By.className("nav-link")); // more efficient than linkText because more unique in this case.
         // WebElement homeButton = driver.findElement(By.linkText("Home"));
         homeButton.click();
         String actualTitle = driver.getTitle();
