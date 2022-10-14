@@ -15,7 +15,6 @@ public abstract class TestBase {
     public void setup() {
         driver = WebDriverFactory.getDriver("chrome");
         driver.manage().window().maximize();
-        driver.navigate().to("https://practice.cydeo.com/web-tables");
         driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
     }
 
