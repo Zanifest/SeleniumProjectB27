@@ -40,7 +40,7 @@ Expected: Portal
     public void crm_login_test_2(){
         driver.navigate().to("http://login1.nextbasecrm.com/");
         CRM_Utilities.login_crm(driver);
-        BrowserUtils.verifyTitle(driver, "Portal");
+        BrowserUtils.verifyTitle(driver,"Portal");
     }
     @Test (priority = 3)
     public void crm_login_test_3(){
