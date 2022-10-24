@@ -1,10 +1,15 @@
 package com.cydeo.tests.practice_week_5;
 
 import com.cydeo.utilities.Driver;
+import com.google.errorprone.annotations.FormatMethod;
 import io.github.bonigarcia.wdm.WebDriverManager;
+import org.openqa.selenium.By;
 import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
+import org.testng.annotations.BeforeMethod;
+import org.testng.annotations.BeforeTest;
 import org.testng.annotations.Test;
 
 import java.util.concurrent.TimeUnit;
@@ -34,5 +39,11 @@ as arguments into executeScript() method
         driver.navigate().to("https://practice.cydeo.com/large");
 
         JavascriptExecutor js = ((JavascriptExecutor) driver);
+        WebElement cydeoLink = driver.findElement(By.xpath("//a[@href='https://cydeo.com/']"));
+        WebElement homeLink = driver.findElement(By.xpath("//a[@href='/']"));
+
+        js.executeScript("arguments[0].scrollIntoView(true)",cydeoLink);
+        js.executeScript("arguments[0].scrollIntoView(true)", homeLink);
     }
+
 }
